@@ -7,6 +7,7 @@ import Mainlayout from '../Mainlayout.jsx'
 import Home from './Components/Home/Home.jsx'
 import Error404 from './Components/Error404.jsx'
 import AddData from './Components/Add Data/AddData.jsx'
+import About from './Components/About/About.jsx'
 
 
 const routercreate=createBrowserRouter([{
@@ -22,6 +23,10 @@ const routercreate=createBrowserRouter([{
     {
      path:"/adddata",
      element:<AddData></AddData>
+  },
+    {
+     path:"/about",
+     element:<About></About>
   }
 ]}
 

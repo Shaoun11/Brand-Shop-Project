@@ -9,7 +9,7 @@ const Contact = () => {
 				<h2 className="text-4xl font-bold leadi lg:text-5xl">Let's talk!</h2>
 				<div className="">Vivamus in nisl metus? Phasellus.</div>
 			</div>
-			<img  src="https://media.istockphoto.com/id/1269831054/vector/flat-vector-conceptual-illustration-of-man-is-working-at-home.jpg?s=612x612&w=0&k=20&c=uN9s5er9dxWx30NIHxSwCi210pz-c1-IFKoQIHJwZTc=" alt="Contact our customer support" className=" -ml-32 w-[1700px]" />
+			<img  src="https://i.ibb.co/LNHWW00/istockphoto-1269831054-612x612-removebg-preview.png" alt="Contact our customer support" className=" lg:-ml-32 -ml-5 w-[1700px]" />
 		</div>
 		<form novalidate="" className="space-y-6">
 			<div>
