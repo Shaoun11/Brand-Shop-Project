@@ -33,7 +33,7 @@ const AddData = () => {
                 icon: 'success',
                 confirmButtonText: 'Thank you'
               })
-            
+           form.reset() ;
         }
     })
 

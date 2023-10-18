@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer/Footer';
 
 const About = () => {
     return (
@@ -152,9 +153,9 @@ const About = () => {
                         <div
                             className="inline-block mb-3 overflow-hidden text-xs text-white bg-blue-500 rounded-full w-44 h-44 sm:w-64 sm:h-64">
                             <img className="object-cover w-full h-full transition-all hover:scale-110"
-                                src="https://i.postimg.cc/bNyr5cJq/pexels-anastasia-shuraeva-5704720.jpg" alt=""/>
+                                src="https://images.pexels.com/photos/3974754/pexels-photo-3974754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt=""/>
                         </div>
-                        <h2 className="mb-2 text-xl font-semibold  text-gray-800">Sriyana Berley</h2>
+                        <h2 className="mb-2 text-xl font-semibold  text-gray-800">Smith Berley</h2>
                         <span
                             className="inline-block mb-6 text-base font-medium  text-gray-800">Administrator
                         </span>
@@ -296,7 +297,7 @@ const About = () => {
             </div>
         </div>
     </section>
-    
+      <Footer></Footer>
 
        </div>
     );

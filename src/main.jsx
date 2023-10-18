@@ -9,6 +9,9 @@ import Error404 from './Components/Error404.jsx'
 import AddData from './Components/Add Data/AddData.jsx'
 import About from './Components/About/About.jsx'
 
+import NavContact from './Components/Contact/NavContact.jsx'
+import Brand from './Components/Home/BrandCard/Brand.jsx'
+
 
 const routercreate=createBrowserRouter([{
   path:"/",
@@ -27,6 +30,15 @@ const routercreate=createBrowserRouter([{
     {
      path:"/about",
      element:<About></About>
+  },
+    {
+     path:"/contact",
+     element:<NavContact></NavContact>
+  },
+    {
+     path:"/brand",
+     element:<Brand></Brand>,
+     loader:()=>fetch("http://localhost:5000/phones")
   }
 ]}
 

@@ -18,7 +18,7 @@ const Home = () => {
             </div>
             <div className='grid  grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 mt-20 max-w-7xl mx-auto'>
                 {
-                    brands.map(brand=><Homecard key={brand.id} brand={brand} ></Homecard>)
+                    brands.map(brand=><Homecard key={brand.id} brand={brand} ></Homecard> )
                 }
             </div>
             <FeturedSection></FeturedSection>

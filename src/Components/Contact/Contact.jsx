@@ -7,7 +7,7 @@ const Contact = () => {
 		<div className="flex flex-col justify-between">
 			<div className="space-y-2">
 				<h2 className="text-4xl font-bold leadi lg:text-5xl">Let's talk!</h2>
-				<div className="">Vivamus in nisl metus? Phasellus.</div>
+				<div className="">Chat to our friendly team..!</div>
 			</div>
 			<img  src="https://i.ibb.co/LNHWW00/istockphoto-1269831054-612x612-removebg-preview.png" alt="Contact our customer support" className=" lg:-ml-32 -ml-5 w-[1700px]" />
 		</div>
