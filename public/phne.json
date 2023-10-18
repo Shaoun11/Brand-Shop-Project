@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "name": "Apple",
+      "img": "https://i.ibb.co/QvssLHk/becbca09cc81c9ecd1ce133c836b3f25.gif"
+    },
+    {
+        "id": 2,
+        "name": "Samsung",
+        "img": "https://i.ibb.co/cCQB610/ae6bfa53d1743939f81c4f38388c036d.gif"
+      },
+    {
+      "id": 3,
+      "name": "Google Pixel",
+      "img": "https://i.ibb.co/1fds46q/02dea395998833-5ea460d10b123.gif"
+    },
+    
+    {
+      "id": 4,
+      "name": "OnePlus",
+      "img": "https://i.ibb.co/BtYdkyq/HD-wallpaper-oneplus-929-android-black-logo-minimal-one-plus-simple-stock.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Honor",
+      "img": "https://i.ibb.co/hyR17b9/giphy.gif"
+    },
+    {
+      "id": 6,
+      "name": "Huawei",
+      "img": "https://i.ibb.co/ZTn1VSs/huawei-logo-brand-phone-symbol-with-name-red-design-china-mobile-illustration-with-black-background.jpg"
+    }
+  ]

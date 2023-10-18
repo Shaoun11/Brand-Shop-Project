@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
+
+
 const Header = () => {
     const {user,name}=useContext;
     const link=<>
     <li><NavLink to={"/"}>Home</NavLink></li>
-    <li><NavLink to={"/testimonial"}>Testimonial</NavLink></li>
+    <li><NavLink to={"/adddata"}>Add Product</NavLink></li>
     <li><NavLink to={"/about"}>About</NavLink></li>
     <li><NavLink to={"/contact"}>Contact</NavLink></li>
 
@@ -49,6 +51,7 @@ const Header = () => {
             <Link to={"/login"}>  <button className="btn btn-outline ">Log in</button></Link>
        
           }
+
         
          </div>
       

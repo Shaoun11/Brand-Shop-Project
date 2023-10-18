@@ -6,6 +6,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Mainlayout from '../Mainlayout.jsx'
 import Home from './Components/Home/Home.jsx'
 import Error404 from './Components/Error404.jsx'
+import AddData from './Components/Add Data/AddData.jsx'
+
 
 const routercreate=createBrowserRouter([{
   path:"/",
@@ -14,7 +16,12 @@ const routercreate=createBrowserRouter([{
   children:[
     {
      path:"/",
-     element:<Home></Home>
+     element:<Home></Home>,
+     loader:()=>fetch("./phne.json")
+  },
+    {
+     path:"/adddata",
+     element:<AddData></AddData>
   }
 ]}
 
