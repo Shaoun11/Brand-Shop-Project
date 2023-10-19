@@ -10,7 +10,8 @@ import AddData from './Components/Add Data/AddData.jsx'
 import About from './Components/About/About.jsx'
 
 import NavContact from './Components/Contact/NavContact.jsx'
-import Brand from './Components/Home/BrandCard/Brand.jsx'
+import Applecard from './Components/Home/BrandCard/APplecard.jsx'
+
 
 
 const routercreate=createBrowserRouter([{
@@ -35,9 +36,10 @@ const routercreate=createBrowserRouter([{
      path:"/contact",
      element:<NavContact></NavContact>
   },
+   
     {
-     path:"/brand",
-     element:<Brand></Brand>,
+     path:"/:Apple",
+     element:<Applecard></Applecard>,
      loader:()=>fetch("http://localhost:5000/phones")
   }
 ]}

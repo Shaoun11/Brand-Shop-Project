@@ -1,17 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 
 const Homecard = ({brand}) => {
  
     const {name,img}=brand;
 
-    const handlebrnd=name=>{
-        console.log(name);
-      
-     
-    }
+  
     return (
         <div>
-     <Link to={"/brand"} onClick={()=>handlebrnd(name)}>
+     <Link to={`/${name}`}>
      <div className=" relative flex gap-4 flex-col   overflow-hidden ">
   <div className="absolute inset-0 bg-center"></div>
   <div className="group relative m-0 flex h-72 w-96 rounded-xl shadow-xl ring-gray-900/5 sm:mx-auto sm:max-w-lg">

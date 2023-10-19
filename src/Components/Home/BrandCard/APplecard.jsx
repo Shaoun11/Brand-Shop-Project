@@ -1,8 +1,26 @@
+import React, { useEffect, useState } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
+import Applecart from './Applecart';
+import Footer from '../../Footer/Footer';
 
-const Carosel = () => {
+
+
+const Applecard = () => {
+    const [brand,setbrand]=useState([])
+    const {Apple}=useParams()
+   
+    const brands=useLoaderData();
+
+      
+    useEffect(()=>{
+        const findApple=brands?.filter((phone)=>phone.BrandName==Apple)
+        setbrand(findApple)
+    },[Apple,brands])
+     console.log(brand);
     return (
-        <div className=' '>
-        <div className="   carousel w-full">
+        <div className='bg-stone-100'>
+            <div>
+            <div className="   carousel w-full">
          
          <div id="slide1" className="carousel-item   relative w-full">
            <img 
@@ -37,11 +55,19 @@ const Carosel = () => {
          </div>
     
        </div>
-   
-      
-             
-  </div>
+            </div>
+            <div>
+<h1 className='text-7xl font-semibold text-center mt-16 pb-32 text-black'>Our <span className='text-red-500'>{Apple}</span> Product</h1>
+            </div>
+          <div className='grid lg:grid-cols-3 pb-14 gap-8 grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto'>
+            
+          {
+            brand.map(apple=><Applecart Applee={apple}></Applecart>)
+          }
+          </div>
+          <Footer></Footer>
+        </div>
     );
 };
 
-export default Carosel;
+export default Applecard;
