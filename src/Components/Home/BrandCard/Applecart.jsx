@@ -1,8 +1,9 @@
 import { split } from 'postcss/lib/list';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Applecart = ({Applee}) => {
-    const {name,img,BrandName,description,Price, type, rating}=Applee;
+    const {_id,name,img,BrandName,description,Price, type, rating}=Applee;
     return (
         <div>
 
@@ -10,12 +11,35 @@ const Applecart = ({Applee}) => {
   <figure><img className='w-[200px] mt-8' src={img} alt="Shoes" /></figure>
   <div className="card-body">
                 
-  <div className="w-full flex-none text-sm flex items-center text-gray-600">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-red-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <span class="text-gray-900 whitespace-nowrap mr-3">{rating}</span><span class="mr-2 text-gray-900">Bangladesh</span>
-                </div>
+  <div className="space-x-1 flex  mt-9">
+                <svg className="w-4 h-4 mx-px fill-current text-orange-600" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 14 14">
+                    <path
+                        d="M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z">
+                    </path>
+                </svg>
+                <svg className="w-4 h-4 mx-px fill-current text-orange-600" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 14 14">
+                    <path
+                        d="M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z">
+                    </path>
+                </svg>
+                <svg className="w-4 h-4 mx-px fill-current text-orange-600" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 14 14">
+                    <path
+                        d="M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z">
+                    </path>
+                </svg>
+                <svg className="w-4 h-4 mx-px fill-current text-orange-600" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 14 14">
+                    <path
+                        d="M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z">
+                    </path>
+                </svg>
+                <p className='font-medium text-base -mt-[3px]'>{rating}</p>
+                
+                
+            </div>
             
 <div>
 <h2 className="card-title">{name}</h2>
@@ -25,8 +49,13 @@ const Applecart = ({Applee}) => {
     <p className='text-sm font-medium'><span className='font-serif'>Description:</span>{description.slice(0,150)}.....</p>
 
 </div>
-    <div className="card-actions ">
-      <button className="btn bg-red-500 border-none text-white btn-primary">Details </button>
+    <div className="card-actions flex ">
+    <div>
+   <Link to={`/detailsCard/${_id}`}> <button className="btn btn-sm bg-red-500 border-none text-white btn-primary">Details </button></Link>
+    </div>
+    <div>
+<Link to={`/updatedata/${_id}`} >    <button className="btn btn-sm bg-red-500 border-none text-white btn-primary">Update </button></Link>
+    </div>
     </div>
   </div>
 </div>

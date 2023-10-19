@@ -11,6 +11,8 @@ import About from './Components/About/About.jsx'
 
 import NavContact from './Components/Contact/NavContact.jsx'
 import Applecard from './Components/Home/BrandCard/APplecard.jsx'
+import UpdatedData from './Components/Add Data/UpdatedData.jsx'
+import Details from './Components/Home/HomeCard/Details.jsx'
 
 
 
@@ -41,6 +43,18 @@ const routercreate=createBrowserRouter([{
      path:"/:Apple",
      element:<Applecard></Applecard>,
      loader:()=>fetch("http://localhost:5000/phones")
+  },
+    {
+     path:"/updatedata/:id",
+     element:<UpdatedData></UpdatedData>,
+     loader:({params})=>fetch(`http://localhost:5000/phones/${params.id}`)
+   
+  },
+    {
+     path:"/detailsCard/:id",
+     element:<Details></Details>,
+     loader:({params})=>fetch(`http://localhost:5000/phones/${params.id}`)
+   
   }
 ]}
 
