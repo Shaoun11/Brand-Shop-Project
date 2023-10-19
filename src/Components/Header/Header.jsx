@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { Authcontext } from '../Authrovider/Authprovider';
+
 
 
 
 const Header = () => {
-    const {user,name}=useContext;
+    const {user,logout}=useContext(Authcontext);
     const link=<>
     <li><NavLink to={"/"}>Home</NavLink></li>
     <li><NavLink to={"/adddata"}>Add Product</NavLink></li>
@@ -47,7 +49,7 @@ const Header = () => {
           </div>
          <div>
           {
-            user?<Link >  <button className="btn btn-outline font-medium ">Log Out</button></Link> :
+            user?<Link onClick={logout} >  <button className="btn btn-outline font-medium ">Log Out</button></Link> :
             <Link to={"/login"}>  <button className="btn btn-outline ">Log in</button></Link>
        
           }

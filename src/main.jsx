@@ -13,6 +13,9 @@ import NavContact from './Components/Contact/NavContact.jsx'
 import Applecard from './Components/Home/BrandCard/APplecard.jsx'
 import UpdatedData from './Components/Add Data/UpdatedData.jsx'
 import Details from './Components/Home/HomeCard/Details.jsx'
+import Login from './Components/Authentication/Login.jsx'
+import AuthProvider from './Components/Authrovider/Authprovider.jsx'
+import PrivateRoute from './Components/PrivateRoute.jsx'
 
 
 
@@ -46,14 +49,19 @@ const routercreate=createBrowserRouter([{
   },
     {
      path:"/updatedata/:id",
-     element:<UpdatedData></UpdatedData>,
+     element:<PrivateRoute><UpdatedData></UpdatedData></PrivateRoute>,
      loader:({params})=>fetch(`http://localhost:5000/phones/${params.id}`)
    
   },
     {
      path:"/detailsCard/:id",
-     element:<Details></Details>,
+     element:<PrivateRoute><Details></Details></PrivateRoute>,
      loader:({params})=>fetch(`http://localhost:5000/phones/${params.id}`)
+   
+  },
+    {
+     path:"/login",
+     element:<Login></Login>
    
   }
 ]}
@@ -64,6 +72,6 @@ const routercreate=createBrowserRouter([{
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <RouterProvider router={routercreate}></RouterProvider>
+<AuthProvider>   <RouterProvider router={routercreate}></RouterProvider></AuthProvider>
   </React.StrictMode>,
 )
