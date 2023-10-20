@@ -16,6 +16,8 @@ import Details from './Components/Home/HomeCard/Details.jsx'
 import Login from './Components/Authentication/Login.jsx'
 import AuthProvider from './Components/Authrovider/Authprovider.jsx'
 import PrivateRoute from './Components/PrivateRoute.jsx'
+import Register from './Components/Authentication/Register.jsx'
+import Mycart from './Components/Mycart/Mycart.jsx'
 
 
 
@@ -60,8 +62,19 @@ const routercreate=createBrowserRouter([{
    
   },
     {
+     path:"/mycart",
+     element:<Mycart></Mycart>,
+     loader:()=>fetch('http://localhost:5000/mycart')
+   
+  },
+    {
      path:"/login",
      element:<Login></Login>
+   
+  },
+    {
+     path:"/register",
+     element:<Register></Register>
    
   }
 ]}
