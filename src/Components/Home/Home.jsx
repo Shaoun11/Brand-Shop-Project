@@ -16,7 +16,7 @@ const Home = () => {
            <div className='mt-32'>
                 <h1 className='text-7xl text-center font-semibold '>Our <span className='text-red-500'>Brand</span></h1>
             </div>
-            <div className='grid  grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 mt-20 max-w-7xl mx-auto'>
+            <div className='grid  grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 mt-20 max-w-7xl lg:ml-28 md:ml-0 ml-5 mx-auto'>
                 {
                     brands.map(brand=><Homecard key={brand.id} brand={brand} ></Homecard> )
                 }

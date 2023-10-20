@@ -60,7 +60,7 @@ const Applecard = () => {
             <div>
 <h1 className='text-7xl font-semibold text-center mt-16 pb-32 text-black'>Our <span className='text-red-500'>{Apple}</span> Product</h1>
             </div>
-          <div className='grid lg:grid-cols-3 pb-14 gap-8 grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto'>
+          <div className='grid lg:grid-cols-3 pb-14 gap-8 grid-cols-1 lg:ml-[114px] md:ml-0 ml-5 md:grid-cols-2 max-w-7xl mx-auto'>
             
           {
             brand.map(apple=><Applecart Applee={apple}></Applecart>)

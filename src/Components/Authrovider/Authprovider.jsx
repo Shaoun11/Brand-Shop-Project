@@ -14,7 +14,7 @@ const AuthProvider = ({children}) => {
   const [user,setuser]=useState(null);
   const [loader,setloader]=useState(true)
   const createuser=(email,password)=>{
-    
+    setloader(true);
     return createUserWithEmailAndPassword(auth,email,password)
     }
 
@@ -40,14 +40,15 @@ const AuthProvider = ({children}) => {
     }
 
    const logout=()=>{
-    setloader(true);
+    
     return signOut(auth)
    }
 
   useEffect(()=>{
-    setloader(false);
+    
     onAuthStateChanged(auth, (user) => {
-      setuser(user)
+      setuser(user);
+      setloader(false);
      
     });
 

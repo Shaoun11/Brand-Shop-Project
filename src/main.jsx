@@ -47,24 +47,24 @@ const routercreate=createBrowserRouter([{
     {
      path:"/:Apple",
      element:<Applecard></Applecard>,
-     loader:()=>fetch("http://localhost:5000/phones")
+     loader:()=>fetch("https://my-project-xi-sable.vercel.app/phones")
   },
     {
      path:"/updatedata/:id",
      element:<PrivateRoute><UpdatedData></UpdatedData></PrivateRoute>,
-     loader:({params})=>fetch(`http://localhost:5000/phones/${params.id}`)
+     loader:({params})=>fetch(`https://my-project-xi-sable.vercel.app/phones/${params.id}`)
    
   },
     {
      path:"/detailsCard/:id",
      element:<PrivateRoute><Details></Details></PrivateRoute>,
-     loader:({params})=>fetch(`http://localhost:5000/phones/${params.id}`)
+     loader:({params})=>fetch(`https://my-project-xi-sable.vercel.app/phones/${params.id}`)
    
   },
     {
      path:"/mycart",
      element:<PrivateRoute><Mycart></Mycart></PrivateRoute>,
-     loader:()=>fetch('http://localhost:5000/mycart')
+     loader:()=>fetch('https://my-project-xi-sable.vercel.app/mycart')
    
   },
     {

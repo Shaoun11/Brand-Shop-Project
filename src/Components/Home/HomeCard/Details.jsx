@@ -14,7 +14,7 @@ const handle=()=>{
     const cartdata={name,img,description,Price, type, rating,email}
     console.log(cartdata);
 
-    fetch('http://localhost:5000/mycart',{
+    fetch('https://my-project-xi-sable.vercel.app/mycart',{
         method:"post",
         headers: {
             "Content-Type": "application/json",
@@ -44,9 +44,9 @@ const handle=()=>{
         <div>
             <section  className="text-gray-700 body-font overflow-hidden bg-white">
   <div  className=" lg:ml-12 lg:mr-12 md:ml-12 md:mr-12 py-24 mx-auto">
-    <div  className="lg:w-[100%] mx-auto flex flex-wrap">
-      <img alt="ecommerce"  className="lg:w-1/2 w-[800px] h-[800px] mt-8 object-cover object-center rounded border border-gray-200" src={img}/>
-      <div  className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+    <div  className="lg:w-[100%]  mx-auto flex flex-wrap">
+      <img alt="ecommerce"  className="lg:w-1/2 md:w-[800px] md:h-[800px] sm:w-[800px] mt-8 object-cover object-center rounded border border-gray-200" src={img}/>
+      <div  className="lg:w-1/2 w-full lg:pl-10 md:pl-10 pl-3 pr-3 lg:py-6 mt-6 lg:mt-0">
         <h2  className="text-sm title-font font-semibold text-gray-500 tracking-widest">{BrandName}</h2>
         <h1  className="text-gray-900 text-3xl title-font font-medium mb-1">{name}</h1>
         <div  className="flex mb-4">

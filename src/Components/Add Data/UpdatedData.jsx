@@ -21,7 +21,7 @@ const UpdatedData = () => {
        
         const dataup={name,img,BrandName,rating,Price,type,description}
        
-        fetch(`http://localhost:5000/phones/${_id}`, {
+        fetch(`https://my-project-xi-sable.vercel.app/phones/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

@@ -16,7 +16,7 @@ const Header = () => {
 
   </>
     return (
-        <div className="navbar bg-base-200 ">
+        <div className="navbar bg-white ">
         <div className="navbar-start ">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -50,8 +50,8 @@ const Header = () => {
           </div>
          <div>
           {
-            user?<Link onClick={logout} >  <button className="btn btn-outline font-medium ">Log Out</button></Link> :
-            <Link to={"/login"}>  <button className="btn btn-outline ">Log in</button></Link>
+            user?<Link onClick={logout} >  <button className="btn btn-outline font-medium cursor-pointer items-center justify-center rounded-md border py-2 px-8 text-center text-gray-500 transition duration-150 ease-in-out hover:translate-y-1 hover:bg-rose-500 hover:text-white ">Log Out</button></Link> :
+            <Link to={"/login"}>  <button className="btn btn-outline cursor-pointer items-center justify-center rounded-md border py-2 px-8 text-center text-gray-500 transition duration-150 ease-in-out hover:translate-y-1 hover:bg-rose-500 hover:text-white  ">Log in</button></Link>
        
           }
 

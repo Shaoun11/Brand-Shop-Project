@@ -16,7 +16,7 @@ const AddData = () => {
    
     const data={name,img,BrandName,rating,Price,type,description}
 
-    fetch('http://localhost:5000/phones',{
+    fetch('https://my-project-xi-sable.vercel.app/phones',{
         method:"post",
         headers: {
             "Content-Type": "application/json",

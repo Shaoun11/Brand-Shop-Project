@@ -15,7 +15,7 @@ const AddCard = ({cart, setdata,datacart}) => {
     }).then((result) => {
       if (result.isConfirmed) {
         
-      fetch(`http://localhost:5000/phones/${_id}`,{
+      fetch(`https://my-project-xi-sable.vercel.app/phones/${_id}`,{
           method:"DELETE"
       })
       .then(res=>res.json())
