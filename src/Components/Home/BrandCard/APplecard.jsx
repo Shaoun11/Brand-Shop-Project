@@ -7,7 +7,8 @@ import Footer from '../../Footer/Footer';
 
 const Applecard = () => {
     const [brand,setbrand]=useState([])
-    const {Apple}=useParams()
+    const {Apple}=useParams();
+    console.log(Apple);
    
     const brands=useLoaderData();
 

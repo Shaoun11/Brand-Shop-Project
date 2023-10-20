@@ -11,7 +11,7 @@ const Details = () => {
     const {_id,name,img,BrandName,description,Price, type, rating}=details;
 const handle=()=>{
     
-    const cartdata={name,img,BrandName,description,Price, type, rating,email}
+    const cartdata={name,img,description,Price, type, rating,email}
     console.log(cartdata);
 
     fetch('http://localhost:5000/mycart',{

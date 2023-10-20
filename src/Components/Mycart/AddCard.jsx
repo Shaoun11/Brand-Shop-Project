@@ -1,8 +1,41 @@
 import React from 'react';
+import Swal from 'sweetalert2';
+const AddCard = ({cart, setdata,datacart}) => {
+    console.log(datacart);
+    const {_id,name,img,description,Price}=cart;
+  const handle=_id=>{
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        
+      fetch(`http://localhost:5000/phones/${_id}`,{
+          method:"DELETE"
+      })
+      .then(res=>res.json())
+      .then(data=>{
+          console.log(data);
+          if (data.deletedCount >0) {
+              Swal.fire(
+                  'Deleted!',
+                  'Your cart has been deleted.',
+                  'success'
+                ) 
+                const remaining =datacart.filter(datas=>datas._id!==_id)
+                setdata(remaining)
+          }
+      })
+      console.log(_id);
+      }
+    })
+  }
 
-const AddCard = ({cart}) => {
-    console.log(cart);
-    const {_id,name,img,BrandName,description,Price, type, rating}=cart;
     return (
         <div>
             <section   className="">
@@ -12,7 +45,7 @@ const AddCard = ({cart}) => {
       <div   className="relative p-8 md:w-4/6"> 
         <div   className="flex flex-col md:flex-row">
           <h2   className="mb-2 text-2xl font-black">{name}</h2>
-          <span   className="ml-2 text-xs uppercase">{BrandName}</span>
+        
         </div>
         <p   className="mt-3 font-sans text-base tracking-normal">{description.slice(0,144)}....</p>
         <div   className="flex flex-col md:flex-row md:items-end">
@@ -26,7 +59,7 @@ const AddCard = ({cart}) => {
             </svg>
             Buy now
           </button>
-          <button   className="mr-2 mb-4 flex cursor-pointer items-center justify-center rounded-md border py-2 px-8 text-center text-gray-500 transition duration-150 ease-in-out hover:translate-y-1 hover:bg-rose-500 hover:text-white">Preview</button>
+          <button onClick={()=>handle(_id)}   className="mr-2 mb-4 flex cursor-pointer items-center justify-center rounded-md border py-2 px-8 text-center text-gray-500 transition duration-150 ease-in-out hover:translate-y-1 hover:bg-rose-500 hover:text-white"   >Delete</button>
         </div>
       </div>
       <div   className="mx-auto flex items-center px-5 pt-1 md:p-8">
