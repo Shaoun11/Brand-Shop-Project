@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
-import { Form, Link, useNavigate } from 'react-router-dom';
-
+import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import toast from 'react-hot-toast';
 import { Authcontext } from '../Authrovider/Authprovider';
 
@@ -9,8 +8,11 @@ import { Authcontext } from '../Authrovider/Authprovider';
 
 
 const Login = () => {
+    const location=useLocation();
+    console.log(location);
     const navigate=useNavigate()
-    const {userlogin,googlelogin}=useContext(Authcontext);
+    const {userlogin,googlelogin,user}=useContext(Authcontext);
+    console.log(user);
     const handlelogin = e => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -19,10 +21,18 @@ const Login = () => {
         userlogin(email,password)
         .then((userCredential) => {
             // Signed in 
-            const user = userCredential.user;
+            const lgeduser = userCredential.lgeduser;
             toast.success('Login Successfully!')
-            console.log(user);
-            // ...
+            //jwt axios method
+           axios.post("http://localhost:5000/jwt",user,{withCredentials:true})
+           .then(res=>{
+            console.log(res.data);
+            if (res.data.Succcess) {
+                navigate(location?.state? location?.state:('/'))
+            }
+           })
+
+            
           })
           .catch((error) => {
             const errorCode = error.code;
@@ -30,13 +40,16 @@ const Login = () => {
             toast.error("Login failed,please try again!")
             console.log(errorMessage);
             console.log(errorCode);
-          }); }
+          }); } 
           
           const handleloginpopup=(media)=>{
             media()
             .then(res => {
+                const loguser=res.loguser;
                 toast.success('User logged in successfully');
-                navigate('/')
+                navigate(location?.state? location?.state:('/'))
+                
+
             })
             .catch(error => {
                 toast.error(error.message)
@@ -50,7 +63,7 @@ const Login = () => {
             <div className="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
                 <div className="hidden lg:block lg:w-1/2 bg-cover"
                 >
-                    <img className='bg-indigo-100 h-[500px] w-[880px] ' src="https://cdni.iconscout.com/illustration/premium/thumb/login-page-4468581-3783954.png" alt="" />
+                    <img className='bg-indigo-100 h-[500px] w-[880px] ' src="https://media.istockphoto.com/vectors/register-account-submit-access-login-password-username-internet-vector-id1281150061?k=20&m=1281150061&s=612x612&w=0&h=wpCvmggedXRECWK-FVL98MMllubyevIrXuUu50fdCqE=" alt="" />
                 </div>
                 <div className="w-full p-8 lg:w-1/2">
                     <h2 className="text-2xl font-semibold text-gray-700 text-center">Hey</h2>

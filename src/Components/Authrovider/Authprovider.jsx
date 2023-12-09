@@ -8,7 +8,7 @@ import auth from '../Authentication/Authentication';
 const googleprovider=new GoogleAuthProvider();
 const githubprovider=new GithubAuthProvider();
 
-
+       
 
 const AuthProvider = ({children}) => {
   const [user,setuser]=useState(null);

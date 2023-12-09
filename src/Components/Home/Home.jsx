@@ -7,11 +7,14 @@ import FeturedSection from './FeturedSection';
 import CustomerSay from './CustomerSay';
 import Contact from '../Contact/Contact';
 
+
+
 const Home = () => {
     const brands=useLoaderData();
- 
+  
     return (
         <div className='bg-stone-100'>
+        
            <Banner></Banner>
            <div className='mt-32'>
                 <h1 className='text-7xl text-center font-semibold '>Our <span className='text-red-500'>Brand</span></h1>

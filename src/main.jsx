@@ -46,7 +46,7 @@ const routercreate=createBrowserRouter([{
    
     {
      path:"/:Apple",
-     element:<Applecard></Applecard>,
+     element:<PrivateRoute><Applecard></Applecard></PrivateRoute>,
      loader:()=>fetch("https://my-project-xi-sable.vercel.app/phones")
   },
     {

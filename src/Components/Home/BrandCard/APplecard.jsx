@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Applecart from './Applecart';
@@ -17,7 +18,8 @@ const Applecard = () => {
         const findApple=brands?.filter((phone)=>phone.BrandName==Apple)
         setbrand(findApple)
     },[Apple,brands])
-     console.log(brand);
+    
+
     return (
         <div className='bg-stone-100'>
             <div>

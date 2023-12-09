@@ -15,7 +15,7 @@ const Banner = () => {
             className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
           >
             <div className="max-w-xl">
-              <h1 className="lg:text-6xl md:text-6xl text-3xl lg:ml-0 ml-28 md:ml-0 mr-40">
+              <h1 className="  lg:text-6xl md:text-6xl text-3xl lg:ml-0 ml-28 md:ml-0 mr-40">
                 Let us find your
           <br />
                 <strong className="  mr-[60px]  font-bold text-rose-700">

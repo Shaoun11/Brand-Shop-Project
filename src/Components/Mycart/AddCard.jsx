@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import React from 'react';
 import Swal from 'sweetalert2';
 const AddCard = ({cart, setdata,datacart}) => {

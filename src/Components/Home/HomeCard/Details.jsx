@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { Authcontext } from '../../Authrovider/Authprovider';
@@ -8,13 +9,13 @@ const Details = () => {
     const {user}=useContext(Authcontext);
     const email=user.email;
     const details=useLoaderData();
-    const {_id,name,img,BrandName,description,Price, type, rating}=details;
-const handle=()=>{
+    const {name,img,BrandName,description,Price, type, rating}=details;
+    const handle=()=>{     
     
     const cartdata={name,img,description,Price, type, rating,email}
     console.log(cartdata);
-
-    fetch('https://my-project-xi-sable.vercel.app/mycart',{
+    
+    fetch('https://my-project-xi-sable.vercel.app/mycart', {
         method:"post",
         headers: {
             "Content-Type": "application/json",
@@ -30,11 +31,12 @@ const handle=()=>{
                 text: 'added succesfully mycart',
                 icon: 'success',
                 confirmButtonText: 'Thank you'
-              })
+              }) 
          
         }
     })
 
+    
      
 
 
