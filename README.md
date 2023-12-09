@@ -5,3 +5,5 @@
 - If you buy products from this website, you will get some special discounts on each product.
 - You can buy authentic products at home through this website.
 - Our website is the best solution for those who are busy or have trouble buying goods at the store.
+## :pushpin: Description
+-Discover our brand's essence and explore an array of meticulously curated products on our intuitive and stylish online platform. Immerse yourself in our story, shop our collections, and experience the embodiment of quality, innovation, and style – all conveniently at your fingertips
