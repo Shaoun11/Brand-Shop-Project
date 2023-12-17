@@ -1,6 +1,6 @@
 ## My Project Name is Brand Shop Website
-- Project Live Site Link:- https://foddy-resturent-project.netlify.app/
-# Client-side live link :- https://brand-shop-project.netlify.app/
+
+#  live link :- https://brand-shop-project.netlify.app/
 ## :pushpin: About my project
 - My website is mainly based on technology and electronic accessories.
 - Those who want to buy electronics products at home can buy through my website.
